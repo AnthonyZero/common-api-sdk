@@ -41,7 +41,6 @@ public class OpenApiClient {
         this.appSecret = openApiProperties.getAppSecret();
         this.openapiAddress = openApiProperties.getOpenapiAddress();
         this.okHttp3Client = new OkHttp3Client(openApiProperties.getConnectTimeout(), openApiProperties.getReadTimeout(), openApiProperties.getWriteTimeout());
-        log.info("Open Api client init appId = {}, appMystery = {}, openapiAddress = {}", appId, appSecret, openapiAddress);
     }
 
 

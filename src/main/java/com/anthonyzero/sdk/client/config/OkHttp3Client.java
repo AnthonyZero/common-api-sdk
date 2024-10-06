@@ -69,7 +69,6 @@ public class OkHttp3Client {
     }
 
     public Response execute(String url, HttpMethodEnum method, Map<String, String> headerMap, String bodyJson, String mediaType) {
-        log.info("execute url = {}", url);
         if (method == HttpMethodEnum.GET) {
             bodyJson = null;
         }
@@ -78,7 +77,6 @@ public class OkHttp3Client {
         if (headerMap != null && !headerMap.isEmpty()) {
             Objects.requireNonNull(builder);
             headerMap.forEach(builder::addHeader);
-            log.info("execute url of headers = {}", GsonUtil.toString(headerMap));
         }
 
         Request request;
